@@ -13,9 +13,9 @@
     <a href="#sobre-o-projeto"><strong>Explorar a Documentação »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/GuilhermeGraca/Kotlin-Exercises/issues">Reportar Bug</a>
+    <a href="https://github.com/GuilhermeGraca/kotlin-exercises/issues">Reportar Bug</a>
     &middot;
-    <a href="https://github.com/GuilhermeGraca/Kotlin-Exercises/issues">Sugerir Funcionalidade</a>
+    <a href="https://github.com/GuilhermeGraca/kotlin-exercises/issues">Sugerir Funcionalidade</a>
   </p>
 </div>
 
@@ -107,11 +107,11 @@ Siga estas instruções para configurar uma cópia local do projeto na sua máqu
 
 1. **Clonar o repositório**:
    ```sh
-   git clone https://github.com/GuilhermeGraca/Kotlin-Exercises.git
+   git clone https://github.com/GuilhermeGraca/kotlin-exercises.git
    ```
 2. **Navegar para a pasta do projeto**:
    ```sh
-   cd Kotlin-Exercises
+   cd kotlin-exercises
    ```
 3. **Executar os módulos baseados em Maven ([Kotlin-Fundamentals-and-Virtual-Library](./Kotlin-Fundamentals-and-Virtual-Library) & [Kotlin-Advanced-Exercises](./Kotlin-Advanced-Exercises))**:
    ```sh
@@ -147,7 +147,7 @@ Cada módulo está estruturado para ser executado de forma independente:
 
 * **Guilherme Graça** - A51827
 * **GitHub**: [https://github.com/GuilhermeGraca](https://github.com/GuilhermeGraca)
-* **Link do Projeto**: [https://github.com/GuilhermeGraca/Kotlin-Exercises](https://github.com/GuilhermeGraca/Kotlin-Exercises)
+* **Link do Projeto**: [https://github.com/GuilhermeGraca/kotlin-exercises](https://github.com/GuilhermeGraca/kotlin-exercises)
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
