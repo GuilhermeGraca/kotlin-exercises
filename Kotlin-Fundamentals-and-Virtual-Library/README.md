@@ -1,33 +1,35 @@
-# Assignment 1 — Kotlin Fundamentals e Virtual LibraryCourse: Desenvolvimento de Aplicações Móveis
-Course: Engenharia Informática e Multimédia <br>
-Student(s): Guilherme Graça A51827 <br>
-Date: 08/03/2026 <br>
-Repository URL: https://github.com/GuilhermeGraca/Kotlin-Exercises/tree/main/Kotlin-Fundamentals-and-Virtual-Library <br>
----
+🇵🇹 [Versão em Português disponível em README_PT.md](README_PT.md)
+
+# Assignment 1 — Kotlin Fundamentals & Virtual Library  
+**Course:** Desenvolvimento de Aplicações Móveis (DAM)  
+**Student(s):** Guilherme Graça A51827  
+**Date:** 08/03/2026  
+**Repository URL:** https://github.com/GuilhermeGraca/Kotlin-Exercises/tree/main/Kotlin-Fundamentals-and-Virtual-Library  
 
 ---
 
 ## 1. Introduction
-Este trabalho tem como objetivo aplicar conceitos de Kotlin em contexto prático, através de vários exercícios de consola e de um mini\-sistema orientado a objetos \(Virtual Library\).Foram trabalhados temas como controlo de fluxo, tratamento de exceções, modelação OO, herança, encapsulamento e organização modular do projeto.
+This project aims to apply fundamental Kotlin concepts in a practical context through various console exercises and an object-oriented mini-system (**Virtual Library**). Key topics covered include control flow, exception handling, object-oriented modeling, inheritance, encapsulation, and modular project organization.
 
 ## 2. System Overview
-A solução está organizada em exercícios independentes e num domínio principal de biblioteca virtual.
+The solution is structured into independent training exercises and a main domain for the virtual library.
 
-Funcionalidades principais:
-- <b> Exercícios de treino \(1,2 e3\) com foco em sintaxe e lógica em Kotlin. <b>
-- Calculadora de consola \(Exercício2\), incluindo:
-   - operações aritméticas;
-   - operadores booleanos;
-   - operadores de bit shift;
-   - apresentação de resultados em decimal, hexadecimal e booleano;
-   - tratamento de erros de input e divisão por zero.
-- Virtual Library:
-   - gestão de livros digitais e físicos;
-   - operações de adicionar, procurar, requisitar e devolver livros;
-   - suporte a membros da biblioteca;
-   - contagem global de livros adicionados via `companion object`.
+### Core Features:
+- **Practice Exercises (1, 2, and 3)** focusing on Kotlin syntax and logical reasoning.
+- **Console Calculator (Exercise 2)**, including:
+  - Arithmetic operations;
+  - Boolean operators;
+  - Bitwise shift operators;
+  - Result display in decimal, hexadecimal, and boolean formats;
+  - Input error handling and division-by-zero protection.
+- **Virtual Library:**
+  - Management of digital and physical books;
+  - Operations to add, search, borrow, and return books;
+  - Support for library members;
+  - Global book count tracking via `companion object`.
 
-## 3\. Architecture and DesignEstrutura principal do projeto:
+## 3. Architecture and Design
+### Main Project Structure:
 - `src/main/kotlin/Main.kt`
 - `src/main/kotlin/dam/exer_1/exer_1.kt`
 - `src/main/kotlin/dam/exer_2/exer_2.kt`
@@ -39,77 +41,85 @@ Funcionalidades principais:
 - `src/main/kotlin/dam/virtual_library/LibraryMember.kt`
 - `src/main/kotlin/dam/virtual_library/main.kt`
 
-Decisões de design:
-- Foram seguidos todos os passos descritos no enunciado de modo a obter a arquitetura pretendida.
+### Design Decisions:
+- Followed all steps outlined in the assignment specification to achieve the required architecture.
 
-## 4\. Implementation
-### Módulos principais- **Exercícios1/2/3**: módulos de prática em consola.
+## 4. Implementation
+### Main Modules:
+- **Exercises 1 / 2 / 3**: Console practice modules.
 - **Virtual Library**:
- - `Book`: classe base com `init`, `toString`, `era` calculada e método abstrato `getStorageInfo()`.
- - `DigitalBook` e `PhysicalBook`: acrescentam atributos específicos do formato.
- - `Library`: lista interna de livros e operações de negócio \(add/borrow/return/show/search\).
- - `LibraryMember`: representação de membro com lista de livros requisitados.
+  - `Book`: Base class featuring `init`, `toString`, computed `age` property, and abstract method `getStorageInfo()`.
+  - `DigitalBook` and `PhysicalBook`: Add format-specific attributes.
+  - `Library`: Internal book list and business operations (`add`, `borrow`, `return`, `show`, `search`).
+  - `LibraryMember`: Represents a library member holding a list of borrowed books.
 
-### Pontos relevantes- Aplicação de `when` no exercício da calculadora.
-- Uso de exceções para robustez de input e operações inválidas.
-- Polimorfismo no método `getStorageInfo()` para comportamento por tipo de livro.
-- Mensagens de feedback no fluxo de criação/requisição/devolução.
+### Key Highlights:
+- Application of exhaustive `when` expressions in the calculator exercise.
+- Robust exception handling for user input and invalid operations.
+- Polymorphic behavior via `getStorageInfo()` depending on book type.
+- Feedback messages throughout creation, borrowing, and returning workflows.
 
-## 5\. Testing and Validation
-Estratégia usada:
-- Testes manuais em consola para validar fluxos principais e casos de erro.
-- Validação de cenários:
- - requisição de livro sem stock;
- - devolução de livro existente;
- - pesquisa por autor;
- - inputs inválidos na calculadora;
- - divisão por zero.
+## 5. Testing and Validation
+### Strategy Used:
+- Manual console testing to validate core flows and error handling cases.
+- Validated scenarios:
+  - Borrowing a book that is out of stock;
+  - Returning an already existing book;
+  - Searching books by author;
+  - Invalid inputs in the CLI calculator;
+  - Division by zero handling.
 
-Limitações atuais:
-- Não existem, neste estado, testes automatizados em `src/test/kotlin`.
-- Cobertura depende de execução manual dos cenários.
+### Current Limitations:
+- No automated tests in `src/test/kotlin` at this stage.
+- Coverage relies on manual execution of test scenarios.
 
-## 6\. Usage Instructions
-Pré\-requisitos:
-- JDK compatível \(ex.:17+\)
-- Maven- IntelliJ IDEAPassos:
-1. Clonar o repositório.
-2. Abrir o projeto Maven no IntelliJ.
-3. Compilar:
- - `mvn clean package`
-4. Executar:
- - pela IDE, correndo os ficheiros com função `main` \(ex.: `src/main/kotlin/dam/virtual_library/main.kt`\);
- - ou por configuração Maven/exec apropriada à classe `MainKt`.
+## 6. Usage Instructions
+### Prerequisites:
+- JDK 17+
+- Maven
+- IntelliJ IDEA / Android Studio
 
-
-# Development Process
-## 12\. Version Control and Commit History
-O controlo de versões foi usado para registar evolução incremental \(exercícios e biblioteca\), com histórico de commits orientado a funcionalidades e correções progressivas.
-
-## 13\. Difficulties and Lessons Learned
-Principais desafios:
-- Falta de conhecimento sobre a sintaxe do kotlin.
-- equilibrar validação de estado com simplicidade no fluxo de consola;
-- garantir conformidade com requisitos detalhados do enunciado.
-
-Aprendizagens:
-- entendimento da sintaxe da linguagem kotlin
-- melhor domínio de classes abstratas, `companion object` e `data class`;
-- maior atenção a casos limite e UX de aplicações de consola.
-
-## 14\. Future Improvements
-Evoluções sugeridas:
-- adicionar testes unitários automatizados;
-- persistência de dados \(ficheiro ou base de dados\);
-- interface gráfica para além da consola;
-- pesquisa avançada e gestão de membros mais completa.
+### Steps:
+1. Clone the repository.
+2. Open the Maven project in IntelliJ IDEA.
+3. Build the project:
+   ```bash
+   mvn clean package
+   ```
+4. Run:
+   - Run the files containing a `main` function from the IDE (e.g., `src/main/kotlin/dam/virtual_library/main.kt`);
+   - Or execute via appropriate Maven configuration targeting `MainKt`.
 
 ---
 
-## 15\. AI Usage Disclosure \(Mandatory\)
-Ferramentas de IA utilizadas:
-- apoio na aprendizagem com pedidos de exemplos de estruturas de dados, como arrays, funções, switch cases etc.. para melhor entendimento da sintaxe de kotlin
-- apoio à redação técnica do README.
+# Development Process
 
-Declaração:
-- o autor mantém total responsabilidade pelo conteúdo final, qualidade do código e conformidade académica.
+## 12. Version Control and Commit History
+Version control was used to track incremental progress (exercises followed by the library), maintaining a commit history oriented around features and progressive fixes.
+
+## 13. Difficulties and Lessons Learned
+### Main Challenges:
+- Initial familiarity with Kotlin syntax;
+- Balancing state validation with console UX simplicity;
+- Ensuring strict compliance with detailed assignment specifications.
+
+### Key Learnings:
+- Improved understanding of Kotlin language syntax;
+- Mastery of abstract classes, `companion object`, and `data class`;
+- Increased attention to edge cases and console application UX.
+
+## 14. Future Improvements
+- Add automated unit tests;
+- Implement data persistence (file-based or database);
+- Provide a graphical user interface (GUI) alongside the console app;
+- Add advanced search and member management features.
+
+---
+
+## 15. AI Usage Disclosure (Mandatory)
+### AI Tools Used:
+- Assistance learning Kotlin syntax via examples of data structures, arrays, functions, and switch/when expressions.
+- Support drafting the technical README documentation.
+
+### Declaration:
+- The author retains full responsibility for the final content, code quality, and academic integrity.

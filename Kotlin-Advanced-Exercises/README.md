@@ -1,60 +1,63 @@
-# Assignment 2 — Section 1: Kotlin Exercises
-Course: Desenvolvimento de Aplicações Móveis (DAM)
-Student(s): Guilherme Graça A51827
-Date: 12/04/2026
-Repository URL: https://github.com/GuilhermeGraca/Kotlin-Exercises/tree/main/Kotlin-Advanced-Exercises
+🇵🇹 [Versão em Português disponível em README_PT.md](README_PT.md)
+
+# Assignment 2 — Section 1: Kotlin Advanced Exercises  
+**Course:** Desenvolvimento de Aplicações Móveis (DAM)  
+**Student(s):** Guilherme Graça A51827  
+**Date:** 12/04/2026  
+**Repository URL:** https://github.com/GuilhermeGraca/Kotlin-Exercises/tree/main/Kotlin-Advanced-Exercises  
+
 ---
 
 ## 1. Introduction
-O objetivo desta primeira secção do trabalho prático foi aprofundar e consolidar conceitos avançados da linguagem Kotlin antes de avançar para o desenvolvimento da interface Android. Os exercícios focaram-se na exploração da documentação e na implementação de soluções utilizando programação funcional, *extension functions*, *higher-order functions*, genéricos e *operator overloading*.
+The goal of this section was to deepen and consolidate advanced Kotlin programming concepts before progressing to Android interface development. The exercises focused on exploring official documentation and implementing solutions using functional programming, *extension functions*, *higher-order functions*, generics, and *operator overloading*.
 
 ## 2. System Overview
-O projeto é composto por quatro módulos lógicos independentes, executados via linha de comandos (CLI):
-1. **Event Log Processing:** Um sistema de processamento de eventos (Login, Logout, Purchase) focado por utilizador.
-2. **Type-Safe In-Memory Cache:** Uma cache genérica (`Cache<K, V>`) para armazenar e transformar dados temporários.
-3. **Configurable Data Pipeline:** Um sistema de processamento sequencial de strings de log.
-4. **2D Vector Library:** Uma biblioteca matemática de vetores bidimensionais (`Vec2`).
+The project consists of four independent logical modules executed via Command Line Interface (CLI):
+1. **Event Log Processing:** A user-centric event processing system (Login, Logout, Purchase).
+2. **Type-Safe In-Memory Cache:** A generic cache (`Cache<K, V>`) to store and transform temporary data safely.
+3. **Configurable Data Pipeline:** A sequential log string processing pipeline.
+4. **2D Vector Library:** A mathematical library for two-dimensional vectors (`Vec2`).
 
 ## 3. Architecture and Design
-A arquitetura baseia-se em princípios de código limpo e nas valências nativas do Kotlin:
-* **Sealed Classes:** Utilizadas no sistema de logs para garantir exaustividade nas expressões `when`.
-* **Generics com Upper Bounds:** Implementados na Cache para garantir segurança de tipos em tempo de compilação.
-* **Function Types & Lambdas:** Usados extensivamente no Data Pipeline para passar comportamentos como parâmetros.
-* **Operator Overloading:** Aplicado na classe `Vec2` para permitir operações matemáticas naturais (ex: `v1 + v2`, `v1 * 2.0`).
+The architecture is built on clean code principles and native Kotlin language strengths:
+- **Sealed Classes:** Used in the event logging system to guarantee exhaustiveness in `when` expressions.
+- **Generics with Upper Bounds:** Implemented in the cache to enforce compile-time type safety.
+- **Function Types & Lambdas:** Used extensively in the Data Pipeline to pass behaviors as parameters.
+- **Operator Overloading:** Applied in the `Vec2` class to enable natural mathematical expressions (e.g., `v1 + v2`, `v1 * 2.0`).
 
 ## 4. Implementation
-Todos os exercícios base e os respetivos *challenges* propostos foram implementados (exeto o no ultimo exercicio, o challenge das componentes não foi realizado devido a não entender o que era proposto):
-
+All core exercises and their proposed challenges were implemented (with the exception of the component challenge in the final exercise, which was omitted due to ambiguity in the requirements).
 
 ## 5. Testing and Validation
-A validação foi feita localmente através da execução da função `main()` em cada um dos ficheiros Kotlin. Os *outputs* gerados no terminal foram comparados e validados contra os resultados esperados descritos no guião do tutorial.
+Validation was performed locally by executing the `main()` function in each Kotlin file. The outputs generated in the terminal were compared and validated against the expected results described in the tutorial guide.
 
 ## 6. Usage Instructions
-1. Clonar o repositório para a máquina local.
-2. Abrir o projeto no Android Studio ou IntelliJ IDEA.
-3. Navegar até à pasta correspondente à Secção 1 de Kotlin.
-4. Executar a função `main()` de cada ficheiro `.kt` individualmente utilizando o botão "Run" (seta verde) no editor.
-5. Observar os resultados impressos na consola (Logcat/Run tool window).
+1. Clone the repository to your local machine.
+2. Open the project in Android Studio or IntelliJ IDEA.
+3. Navigate to the `Kotlin-Advanced-Exercises` folder.
+4. Run the `main()` function in each individual `.kt` file using the run button in the editor.
+5. Observe the results printed in the console (Logcat / Run tool window).
+
+---
 
 # Development Process
 
 ## 12. Version Control and Commit History
-O desenvolvimento foi versionado no Git com commits descritivos por cada fase de trabalho. O histórico reflete o seguinte fluxo de desenvolvimento:
-* **18 Mar:** Inicialização do projeto e finalização dos Exercícios 1 e 2 (incluindo o challenge do Ex. 2).
-* **19 Mar:** Finalização do Exercício 3 e respetivo challenge de pipelines.
-* **20 Mar:** Finalização do Exercício 4 e um dos challenges.
+Development was versioned in Git with descriptive commits for each phase of work. The history reflects the following workflow:
+- **Mar 18:** Project initialization and completion of Exercises 1 and 2 (including Exercise 2 challenge).
+- **Mar 19:** Completion of Exercise 3 and pipeline challenge.
+- **Mar 20:** Completion of Exercise 4 and one of the challenges.
 
 ## 13. Difficulties and Lessons Learned
-O principal desafio deste trabalho foi a curva de aprendizagem associada aos conceitos avançados da linguagem Kotlin exigidos pelos exercícios. Compreender e aplicar corretamente *Higher-Order Functions*, *Lambdas*, *Extension Functions*, *Generics* (com os seus *upper bounds*) e *Operator Overloading* exigiu bastante estudo da documentação oficial. A maior lição retirada foi perceber como estes conceitos, embora complexos inicialmente,
-permitem escrever código muito mais limpo, expressivo e seguro contra erros de tipos do que as abordagens mais tradicionais noutras linguagens.
+The main challenge was the learning curve associated with advanced Kotlin features required by the exercises. Understanding and correctly applying *Higher-Order Functions*, *Lambdas*, *Extension Functions*, *Generics* (with upper bounds), and *Operator Overloading* required thorough documentation review. The main lesson learned was recognizing how these features, although initially complex, enable writing much cleaner, more expressive, and type-safe code compared to traditional approaches in other languages.
 
 ## 14. Future Improvements
-Por exemplo implementar uma interface grafica para visualizar os resultados das apps desenvolvidas em vez de apenas utilizar a consola.
+- Implement a graphical user interface (GUI) to visualize app outputs rather than relying solely on the console.
+
 ---
 
 ## 15. AI Usage Disclosure (Mandatory)
-Durante o desenvolvimento desta secção, assumo a responsabilidade por todo o código final submetido. As seguintes ferramentas de IA foram utilizadas exclusivamente como apoio ao estudo e documentação:
-
-* **NotebookLM:** Utilizado como tutor interativo para tirar dúvidas conceptuais estritamente sobre a sintaxe e o funcionamento interno da linguagem Kotlin.
-* **Ferramenta de Autocomplete da IDE:** Utilizada para acelerar a redação e auto-completar os comentários explicativos no meio do código, de forma a melhorar a documentação interna das funções sem interferir na lógica de programação implementada.
-* **Gemini 3** para auxilio da redação do READ.md
+During the development of this section, the author assumes full responsibility for all submitted final code. The following AI tools were used exclusively for study and documentation assistance:
+- **NotebookLM:** Used as an interactive tutor to resolve conceptual doubts strictly regarding Kotlin syntax and internal language mechanics.
+- **IDE Autocomplete Tool:** Used to speed up drafting and autocompleting explanatory code comments without interfering with the programming logic.
+- **Gemini 3:** Assisted with README technical drafting.

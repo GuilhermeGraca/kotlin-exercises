@@ -1,3 +1,5 @@
+🇵🇹 [Versão em Português disponível em README_PT.md](README_PT.md)
+
 # Kotlin Exercises & Practical Assignments
 
 **Author:** Guilherme Graça (A51827)  

@@ -1,44 +1,55 @@
-# Assignment 3 — Annotation Processor
-Course: Desenvolvimento de Aplicações Móveis
-Student(s): Guilherme Graça A51827
-Date: 2 de Maio de 2026
-Repository URL: https://github.com/GuilhermeGraca/Kotlin-Exercises/tree/main/Kotlin-Annotation-Processor
+🇵🇹 [Versão em Português disponível em README_PT.md](README_PT.md)
+
+# Assignment 3 — Annotation Processor  
+**Course:** Desenvolvimento de Aplicações Móveis (DAM)  
+**Student(s):** Guilherme Graça A51827  
+**Date:** May 2, 2026  
+**Repository URL:** https://github.com/GuilhermeGraca/Kotlin-Exercises/tree/main/Kotlin-Annotation-Processor  
+
 ---
 
 ## 1. Introduction
-O objetivo deste trabalho é desenvolver um processador de anotações em Kotlin para gerar código na compilação. O projeto corresponde ao Exercício 1 do Tutorial 3. O objetivo principal é criar uma anotação `@Greeting` que gera uma classe responsável por imprimir uma mensagem antes da execução do método original.
+The objective of this assignment is to develop a custom Kotlin annotation processor for compile-time code generation. This project corresponds to Exercise 1 of Tutorial 3. The main goal is to create a `@Greeting` annotation that generates a helper class responsible for printing a greeting message before executing the annotated method.
 
 ## 2. System Overview
-A solução é um projeto multi-módulo. A funcionalidade principal é a geração de código através da anotação `@Greeting`. O caso de uso é adicionar a impressão de uma mensagem a métodos existentes sem alterar o seu código base.
+The solution is structured as a multi-module Gradle project. Its primary functionality is compile-time code generation triggered by the `@Greeting` annotation, allowing developers to inject greeting messages into existing methods without altering their original source code.
 
 ## 3. Architecture and Design
-O projeto divide-se em três módulos:
-- `annotations`: Define a anotação `@Greeting`.
-- `processor`: Contém a lógica do processador de anotações para gerar código.
-- `app`: Módulo para testar o código gerado.
+The project is divided into three specialized Gradle modules:
+- `annotations`: Defines the `@Greeting` annotation.
+- `processor`: Contains the annotation processor logic responsible for analyzing annotated code and generating new classes (`kapt`).
+- `app`: Test application module used to apply and verify the generated code.
 
-Optou-se por esta estrutura para separar as responsabilidades.
+This modular structure was chosen to ensure clean separation of concerns between annotation definitions, processing logic, and application usage.
 
 ## 4. Implementation
-A implementação foca-se na anotação no módulo `annotations` e no processador no módulo `processor`. O processador analisa o código e escreve as novas classes. O módulo `app` aplica a anotação para teste.
+Implementation focuses on the annotation definition in the `annotations` module and the processing logic in `processor`. The processor inspects the AST (Abstract Syntax Tree) during compilation and writes the generated source files. The `app` module applies `@Greeting` to test the generated behavior.
 
 ## 5. Testing and Validation
-A validação é feita no módulo `app`. Verifica-se se o código gerado compila e executa corretamente. Confirma-se que a mensagem é exibida na consola antes da execução do método anotado.
+Validation is performed in the `app` module by verifying that the generated code compiles cleanly and runs correctly. It confirms that the greeting message is printed to the console before the execution of the annotated method.
 
 ## 6. Usage Instructions
-Para executar o projeto, compila-se o código com o Gradle. A compilação aciona o processador que gera os ficheiros necessários. De seguida, executa-se o módulo `app` para ver o resultado.
+To execute the project, build the project using Gradle. The build process automatically triggers the Kotlin annotation processor (`kapt`) to generate the required source files. Then, run the `app` module to inspect the console output:
+```bash
+./gradlew build
+./gradlew :app:run
+```
 
 ---
+
 # Development Process
+
 ## 12. Version Control and Commit History
-Utilizou-se o Git para guardar as alterações efetuadas no código do projeto.
+Git was used to track project code changes and milestones.
 
 ## 13. Difficulties and Lessons Learned
-Ocorreram erros constantes de dependências do Gradle do início ao fim. Estes problemas causaram atraso e levaram a que se saltasse o exercício 2. Aprendeu-se sobre a configuração e resolução de dependências nestes tipos de projetos.
+Frequent Gradle dependency and plugin configuration issues occurred throughout development. Resolving these challenges provided deeper insight into multi-module Gradle builds, dependency management, and Kotlin Annotation Processing (`kapt`).
 
 ## 14. Future Improvements
-Pretende-se concluir o exercício 2 futuramente. Pode-se também expandir a anotação para suportar opções de configuração adicionais.
+- Expand the annotation processor to support additional configuration options and parameters.
+- Complete Exercise 2 of the tutorial series.
 
 ---
+
 ## 15. AI Usage Disclosure (Mandatory)
-Utilizou-se o modelo Gemini 3 para diagnosticar erros de dependências do Gradle, após muita tentativa e erro sem saber como resolver. A ferramenta foi também usada na redação deste README. Confirma-se a responsabilidade total pelo conteúdo final.
+Gemini 3 was used to assist in diagnosing Gradle dependency and configuration errors during troubleshooting, as well as aiding in drafting this README. The author confirms full responsibility for all final code and documentation.
