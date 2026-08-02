@@ -1,0 +1,14 @@
+# IntelliJ IDEA / IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Build directories
+**/target/
+**/build/
+**/.gradle/
