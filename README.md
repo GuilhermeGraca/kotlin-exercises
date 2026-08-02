@@ -23,7 +23,6 @@ This unified repository consolidates practical Kotlin exercises, assignments, an
 | **[Kotlin-Annotation-Processor](./Kotlin-Annotation-Processor)** | A multi-module Gradle project implementing a compile-time custom annotation processor (`@Greeting`) for automatic code generation. | • Kotlin Annotation Processing (`kapt`)<br>• Multi-module Gradle build<br>• Compile-time code generation |
 
 ---
-
 ## 🚀 How to Run
 
 1. **Clone the repository:**
